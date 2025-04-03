@@ -41,6 +41,6 @@
 }
 
 .dark .logo {
-  filter: invert(1);
+  filter: invert(0);
 }
 </style>
