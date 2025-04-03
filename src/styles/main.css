@@ -223,3 +223,10 @@ html:not(.dark) [img-dark] {
 .fade-leave-to {
   opacity: 0;
 }
+
+@media (max-width: 768px) {
+  /* Target the image in your profile section */
+  .hide-on-mobile {
+    display: none !important;
+  }
+}

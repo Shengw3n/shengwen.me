@@ -21,14 +21,14 @@ Front End Developer Intern at {Bullseye}<br>
 Lead Engineer at {PMSS Robotics}<br>
 
 </div>
-<img src="/avatar.png" alt="Avatar" style="max-width: 200px; height: auto; margin-top: 25px; border-radius: 10px;" />
+<img src="/avatar.png" alt="Avatar" style="max-width: 200px; height: auto; margin-top: 25px; border-radius: 10px;" class="hide-on-mobile"/>
 </div>
 
 Dreaming up cool engineering ideas and making them come true is where my passion lies. You can find my [full projects list here](/projects).
 
 I write [blog posts](/posts) about life, engineering, and everything in between.
 
-Outside of programming, I enjoy doing photography and fencing 🤺. Some of my photos can be found on [this page](/photos).
+Outside of programming, I enjoy doing photography and fencing🤺. Some of my photos can be found on [this page](/photos).
 
 <div flex-auto />
 
