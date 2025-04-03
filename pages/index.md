@@ -28,7 +28,7 @@ Dreaming up cool engineering ideas and making them come true is where my passion
 
 I write [blog posts](/posts) about life, engineering, and everything in between.
 
-Outside of programming, I enjoy doing photography and going to the gym. Some of my photos can be found on [this page](/photos).
+Outside of programming, I enjoy doing photography and fencing 🤺. Some of my photos can be found on [this page](/photos).
 
 <div flex-auto />
 
