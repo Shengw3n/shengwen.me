@@ -23,6 +23,8 @@ const routes: Post[] = router.getRoutes()
     upcoming: i.meta.frontmatter.upcoming,
     redirect: i.meta.frontmatter.redirect,
     place: i.meta.frontmatter.place,
+    // Add the math property from frontmatter
+    math: i.meta.frontmatter.math,
   }))
 
 const posts = computed(() =>
@@ -92,6 +94,13 @@ function getGroupName(p: Post) {
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block"
               >中文</span>
               <span align-middle>{{ route.title }}</span>
+              <!-- Add MathJax indicator -->
+              <span
+                v-if="route.math"
+                align-middle flex-none text-xs ml--1.5 op60
+                class="i-mdi-math-integral-box"
+                title="Contains math equations"
+              />
               <span
                 v-if="route.redirect"
                 align-middle op50 flex-none text-xs ml--1.5
@@ -118,6 +127,13 @@ function getGroupName(p: Post) {
                 align-middle op50 flex-none
                 i-ri:radio-line
                 title="Provided in radio"
+              />
+              <!-- Add MathJax indicator in the smaller view -->
+              <span
+                v-if="route.math"
+                align-middle op50 flex-none
+                class="i-mdi-math-integral-box"
+                title="Contains math equations"
               />
 
               <span text-sm op50 ws-nowrap>

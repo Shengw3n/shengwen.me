@@ -102,6 +102,9 @@ export default defineConfig({
           ],
         }))
 
+        // Instead of applying mathjax to all pages, we'll apply it conditionally
+        // in the wrapperComponent based on frontmatter
+
         md.use(anchor, {
           slugify,
           permalink: anchor.permalink.linkInsideHeader({

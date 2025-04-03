@@ -12,12 +12,19 @@ const router = useRouter()
 const route = useRoute()
 const content = ref<HTMLDivElement>()
 
-const base = 'https://antfu.me'
-const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading @antfu7\'s ${base}${route.path}\n\nI think...`)}`)
-const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComponent(`Reading @antfu@m.webtoo.ls\'s ${base}${route.path}\n\nI think...`)}`)
-const blueskyUrl = computed(() => `https://bsky.app/intent/compose?text=${encodeURIComponent(`Reading @antfu.me ${base}${route.path}\n\nI think...`)}`)
+// MathJax support
+const mathjaxLoaded = ref(false)
 
+// Check if math is enabled in frontmatter
+const mathjaxEnabled = computed(() => frontmatter?.math === true)
+
+// Load MathJax when needed
 onMounted(() => {
+  if (mathjaxEnabled.value && !mathjaxLoaded.value) {
+    loadMathJax()
+  }
+
+  // Rest of your existing onMounted code
   const navigate = () => {
     if (location.hash) {
       const el = document.querySelector(decodeURIComponent(location.hash))
@@ -74,6 +81,60 @@ onMounted(() => {
       setTimeout(navigate, 1000)
   }, 1)
 })
+
+// Watch for route changes to re-render MathJax when navigating
+// between math-enabled pages
+watch(() => route.path, () => {
+  if (mathjaxEnabled.value && mathjaxLoaded.value && window.MathJax) {
+    setTimeout(() => {
+      window.MathJax.typeset()
+    }, 100)
+  }
+})
+
+function loadMathJax() {
+  // Check if MathJax is already loaded
+  if (document.getElementById('MathJax-script')) {
+    // If already loaded, just typeset the current page
+    if (window.MathJax) {
+      setTimeout(() => {
+        window.MathJax.typeset()
+      }, 100)
+    }
+    return
+  }
+
+  // Set up global MathJax configuration
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      processHtmlClass: 'tex2jax_process',
+      ignoreHtmlClass: 'tex2jax_ignore',
+    },
+    startup: {
+      pageReady() {
+        mathjaxLoaded.value = true
+        return window.MathJax.startup.defaultPageReady()
+      },
+    },
+  }
+
+  // Add MathJax script dynamically
+  const script = document.createElement('script')
+  script.id = 'MathJax-script'
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.async = true
+  document.head.appendChild(script)
+}
+
+// const base = 'https://antfu.me'
+// const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading @antfu7\'s ${base}${route.path}\n\nI think...`)}`)
+// const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComponent(`Reading @antfu@m.webtoo.ls\'s ${base}${route.path}\n\nI think...`)}`)
+// const blueskyUrl = computed(() => `https://bsky.app/intent/compose?text=${encodeURIComponent(`Reading @antfu.me ${base}${route.path}\n\nI think...`)}`)
 
 const ArtComponent = computed(() => {
   let art = frontmatter.art
@@ -133,7 +194,7 @@ const ArtComponent = computed(() => {
     <slot />
   </article>
   <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
-    <template v-if="frontmatter.duration">
+    <!-- <template v-if="frontmatter.duration">
       <span font-mono op50>> </span>
       <span op50>comment on </span>
       <a :href="blueskyUrl" target="_blank" op50>bluesky</a>
@@ -141,7 +202,7 @@ const ArtComponent = computed(() => {
       <a :href="elkUrl" target="_blank" op50>mastodon</a>
       <span op25> / </span>
       <a :href="tweetUrl" target="_blank" op50>twitter</a>
-    </template>
+    </template> -->
     <br>
     <span font-mono op50>> </span>
     <RouterLink
@@ -151,3 +212,38 @@ const ArtComponent = computed(() => {
     />
   </div>
 </template>
+
+<style>
+/* Optional: Some basic styling for math elements */
+.mjx-chtml {
+  display: inline-block;
+  line-height: 0;
+  text-indent: 0;
+  text-align: left;
+  text-transform: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+.MJX-TEX {
+  font-family: 'MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw';
+}
+
+.mjx-block {
+  display: block;
+  margin: 1em 0;
+}
+
+.mjx-chtml[display='true'] {
+  display: block;
+  margin: 1em 0;
+}
+</style>
