@@ -10,6 +10,9 @@ projects:
       link: 'https://github.com/UBC-Rocket/Thrust-Vectoring-II'
       desc: 'PID-Controlled Thrust Vectoring'
       icon: 'i-material-symbols:rocket-launch-outline'
+    - name: 'da Vinci 3D Gaze Estimation'
+      desc: 'Lenet/ResNet + LSTM Model'
+      icon: 'i-material-symbols:eye-tracking-outline'
 
   Embedded Systems:
       - name: 'Thrust Vectoring Drone'
