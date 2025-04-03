@@ -20,7 +20,7 @@ const metaInfo = Object.entries(
 })
 
 const photos = Object.entries(
-  import.meta.glob<string>('./**/*.{jpg,png,JPG,PNG}', {
+  import.meta.glob<string>('./**/*.{jpeg,jpg,png,JPG,PNG}', {
     eager: true,
     query: '?url',
     import: 'default',
