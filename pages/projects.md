@@ -14,7 +14,7 @@ projects:
   Embedded Systems:
       - name: 'Thrust Vectoring Drone'
         link: 'https://github.com/UBC-Rocket/Thrust-Vectoring'
-        desc: 'Active Stabilization Rocket Drone.<br>2nd Place @ Launch Canada 2024'
+        desc: 'Active Stabilization Rocket Drone<br>2nd Place @ Launch Canada 2024'
         icon: 'i-material-symbols:rocket-outline'
       - name: 'Metal Detector Robot'
         link: 'https://github.com/Shengw3n/Remote-Controlled-Metal-Detector-Robot'
@@ -26,7 +26,7 @@ projects:
         icon: 'i-material-symbols:oven-outline'
       - name: "Beauty & the Beast"
         link: 'https://www.ubcrocket.com/past-projects.html'
-        desc: '30k Two-Stage Solid Rocket.<br> Winner @ Launch Canada 2023'
+        desc: '30k Two-Stage Solid Rocket<br> Winner @ Launch Canada 2023'
         icon: 'i-game-icons:rocket-flight'
 
   FPGA:
