@@ -14,7 +14,7 @@ projects:
   Embedded Systems:
       - name: 'Thrust Vectoring Drone'
         link: 'https://github.com/UBC-Rocket/Thrust-Vectoring'
-        desc: '2nd Place @ Launch Canada 2024'
+        desc: 'Active Stabilization Rocket Drone.<br>2nd Place @ Launch Canada 2024'
         icon: 'i-material-symbols:rocket-outline'
       - name: 'Metal Detector Robot'
         link: 'https://github.com/Shengw3n/Remote-Controlled-Metal-Detector-Robot'
@@ -24,12 +24,17 @@ projects:
         link: 'https://github.com/Shengw3n/Reflow-Oven-Controller'
         desc: 'Reflow Oven Controller in Assembly'
         icon: 'i-material-symbols:oven-outline'
+      - name: "Beauty & the Beast"
+        link: 'https://www.ubcrocket.com/past-projects.html'
+        desc: '30k Two-Stage Solid Rocket.<br> Winner @ Launch Canada 2023'
+        icon: 'i-game-icons:rocket-flight'
 
   FPGA:
       - name: 'FPGA RISC Machine'
         link: 'https://github.com/Shengw3n/FPGA-Reduced-Instruction-Set-Computer'
         desc: '16-bit RISC Machine in System Verilog'
         icon: 'i-material-symbols:memory-rounded'
+
 ---
 
 <!-- @layout-full-width -->
