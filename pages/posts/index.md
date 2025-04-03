@@ -1,7 +1,7 @@
 ---
-title: Blog - Anthony Fu
+title: Blog - Steven Chen
 display: ''
-art: plum
+art: dots
 ---
 
 <SubNav />

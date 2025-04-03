@@ -1,6 +1,6 @@
 ---
-title: Notes - Anthony Fu
-art: plum
+title: Notes - Steven Chen
+art: dots
 display: ''
 ---
 
