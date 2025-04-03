@@ -95,12 +95,12 @@ function getGroupName(p: Post) {
               >中文</span>
               <span align-middle>{{ route.title }}</span>
               <!-- Add MathJax indicator -->
-              <span
+              <!-- <span
                 v-if="route.math"
                 align-middle flex-none text-xs ml--1.5 op60
                 class="i-mdi-math-integral-box"
                 title="Contains math equations"
-              />
+              /> -->
               <span
                 v-if="route.redirect"
                 align-middle op50 flex-none text-xs ml--1.5
@@ -129,12 +129,12 @@ function getGroupName(p: Post) {
                 title="Provided in radio"
               />
               <!-- Add MathJax indicator in the smaller view -->
-              <span
+              <!-- <span
                 v-if="route.math"
                 align-middle op50 flex-none
                 class="i-mdi-math-integral-box"
                 title="Contains math equations"
-              />
+              /> -->
 
               <span text-sm op50 ws-nowrap>
                 {{ formatDate(route.date, true) }}
