@@ -9,12 +9,12 @@ function slug(name: string) {
 <template>
   <div class="max-w-300 mx-auto">
     <p text-center mt--6 mb5 op50 text-lg italic>
-      Projects that I created or maintaining.
+      Projects I developed:
     </p>
     <div class="prose pb5 mx-auto mt10 text-center">
       <div flex="~ gap-2 justify-center">
         <a
-          href="https://github.com/antfu"
+          href="https://github.com/shengw3n"
           target="_blank"
           class="group btn-blue inline-block"
         >
@@ -24,7 +24,7 @@ function slug(name: string) {
           />
           GitHub
         </a>
-        <a
+        <!-- <a
           href="https://releases.antfu.me"
           target="_blank"
           class="group btn-amber inline-block"
@@ -45,7 +45,7 @@ function slug(name: string) {
             group-hover="i-ph-cow-duotone-fill text-lime"
           />
           Yak Map
-        </a>
+        </a> -->
       </div>
       <hr>
     </div>
@@ -94,11 +94,11 @@ function slug(name: string) {
       </div>
     </div>
     <div class="prose pb5 mx-auto mt10 text-center">
-      <div block mt-5>
+      <!-- <div block mt-5>
         <a href="https://antfu.me/stars-rank" target="_blank" op50>All projects sort by Stars</a>
-      </div>
+      </div> -->
       <hr>
-      <SponsorButtons />
+      <!-- <SponsorButtons /> -->
     </div>
   </div>
   <div>
