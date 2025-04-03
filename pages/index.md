@@ -1,7 +1,6 @@
 ---
 title: Steven Chen
 description: Steven Chen's Portfolio
-image: /avatar.png
 art: dots
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Notes - Steven Chen
+title: Tech Writes - Steven Chen
 art: dots
 display: ''
 ---
