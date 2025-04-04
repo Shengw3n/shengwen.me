@@ -1,6 +1,55 @@
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  // Load Busuanzi script
+  const script = document.createElement('script')
+  script.async = true
+  script.src = '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+  document.head.appendChild(script)
+
+  // Handle script load error
+  script.onerror = () => {
+    console.error('Failed to load Busuanzi counter')
+
+    // Get the containers
+    const uvContainer = document.getElementById('busuanzi_container_site_uv')
+    const pvContainer = document.getElementById('busuanzi_container_site_pv')
+
+    // Show the containers with fallback values
+    if (uvContainer) {
+      uvContainer.style.display = 'inline'
+      const uvValue = document.getElementById('busuanzi_value_site_uv')
+      if (uvValue)
+        uvValue.textContent = '--'
+    }
+
+    if (pvContainer) {
+      pvContainer.style.display = 'inline'
+      const pvValue = document.getElementById('busuanzi_value_site_pv')
+      if (pvValue)
+        pvValue.textContent = '--'
+    }
+  }
+})
+</script>
+
 <template>
-  <div class="mt-10 mb-6 prose m-auto flex slide-enter animate-delay-1200!">
-    <span class="text-sm op50"><a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color:inherit">CC BY-NC-SA 4.0</a> 2025-PRESENT © Steven Chen</span>
-    <div class="flex-auto" />
+  <div class="mt-10 mb-6 prose m-auto flex flex-col slide-enter animate-delay-1200!">
+    <div class="flex w-full">
+      <span class="text-sm op50"><a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color:inherit">CC BY-NC-SA 4.0</a> 2025-PRESENT © Steven Chen</span>
+      <div class="flex-auto" />
+    </div>
+    <div class="flex w-full mt-2">
+      <span class="text-sm op50">
+        <span id="busuanzi_container_site_uv" style="display:none">
+          Total Visitors: <span id="busuanzi_value_site_uv" />
+        </span>
+        <span class="mx-2">|</span>
+        <span id="busuanzi_container_site_pv" style="display:none">
+          Total Views: <span id="busuanzi_value_site_pv" />
+        </span>
+      </span>
+    </div>
   </div>
 </template>
