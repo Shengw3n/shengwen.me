@@ -1,6 +1,7 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
+// Busuanzi counter setup
 onMounted(() => {
   // Load Busuanzi script
   const script = document.createElement('script')
@@ -32,6 +33,43 @@ onMounted(() => {
     }
   }
 })
+
+// Website runtime calculation
+const runtimeDisplay = ref('')
+let timerInterval = null
+
+// Set your website's launch date here (YYYY, MM-1, DD, HH, MM, SS)
+// Note: Month is 0-indexed (0 = January, 11 = December)
+const launchDate = new Date(2025, 3, 2, 0, 0, 0) // April 2, 2025
+
+function updateRuntime() {
+  const now = new Date()
+  const diff = now - launchDate
+
+  // Calculate time units
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24))
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000)
+
+  // Format the runtime display
+  runtimeDisplay.value = `${days}d ${hours}h ${minutes}m ${seconds}s`
+}
+
+onMounted(() => {
+  // Initial update
+  updateRuntime()
+
+  // Update every second
+  timerInterval = setInterval(updateRuntime, 1000)
+})
+
+onUnmounted(() => {
+  // Clean up the interval when component is unmounted
+  if (timerInterval) {
+    clearInterval(timerInterval)
+  }
+})
 </script>
 
 <template>
@@ -48,6 +86,10 @@ onMounted(() => {
         <span class="mx-2">|</span>
         <span id="busuanzi_container_site_pv" style="display:none">
           Total Views: <span id="busuanzi_value_site_pv" />
+        </span>
+        <span class="mx-2">|</span>
+        <span>
+          Site Age 🚀: <span>{{ runtimeDisplay }}</span>
         </span>
       </span>
     </div>
