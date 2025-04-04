@@ -15,7 +15,7 @@ ML Researcher at {RCL}<br>
 Firmware Lead & Project Manager at {UBC Rocket}<br>
 
 <i>Previously:</i><br>
-Computer Science Teaching Assistant at {UBC}<br>
+Computer Science Teaching Assistant at {UBC CS}<br>
 Front End Developer Intern at {Bullseye}<br>
 Lead Engineer at {PMSS Robotics}<br>
 

@@ -1,5 +1,4 @@
-import { Buffer } from 'node:buffer'
-import { basename, dirname, resolve } from 'node:path'
+import { resolve } from 'node:path'
 import MarkdownItShiki from '@shikijs/markdown-it'
 import { transformerNotationDiff, transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
@@ -12,7 +11,6 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import MarkdownItMagicLink from 'markdown-it-magic-link'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
-import sharp from 'sharp'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -132,7 +130,7 @@ export default defineConfig({
             'NZ Tech': 'https://www.nztech.ca',
             'RCL': 'https://rcl.ece.ubc.ca/home-page/',
             'UBC Rocket': 'https://www.ubcrocket.com',
-            'UBC': 'https://www.ubc.ca',
+            'UBC CS': 'https://www.cs.ubc.ca',
             'Bullseye': 'https://en.bullseye-cn.com',
             'PMSS Robotics': 'https://www.firstinspires.org/robotics/frc',
 
@@ -152,6 +150,8 @@ export default defineConfig({
         md.use(GitHubAlerts)
       },
       frontmatterPreprocess(frontmatter, options, id, defaults) {
+        // OG Image generation block is commented out
+        /*
         (() => {
           if (!id.endsWith('.md'))
             return
@@ -166,6 +166,7 @@ export default defineConfig({
           )
           frontmatter.image = `https://antfu.me/${path}`
         })()
+        */
         const head = defaults(frontmatter, options)
         return { head, frontmatter }
       },
@@ -226,6 +227,8 @@ export default defineConfig({
   },
 })
 
+// OG image generation function is commented out
+/*
 const ogSVg = fs.readFileSync('./scripts/og-template.svg', 'utf-8')
 
 async function generateOg(title: string, output: string) {
@@ -254,3 +257,4 @@ async function generateOg(title: string, output: string) {
     console.error('Failed to generate og image', e)
   }
 }
+*/
