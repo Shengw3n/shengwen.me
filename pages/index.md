@@ -1,6 +1,6 @@
 ---
 title: Steven Chen
-description: Steven Chen's Portfolio
+description: Welcome to my site :)
 art: dots
 ---
 
