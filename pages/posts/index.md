@@ -1,5 +1,5 @@
 ---
-title: Weekly Reports - Steven Chen
+title: Blog - Steven Chen
 display: ''
 art: dots
 ---
