@@ -3,6 +3,7 @@ title: Arknights Pull Analysis
 date: 2025-04-2T12:00:00Z
 desc: Mathematical modeling to calculate the expected number of pulls required to obtain a 6★ character in Arknights
 duration: 10min
+image: /images/arknights.jpg
 math: true
 type: note
 ---
