@@ -81,11 +81,11 @@ onUnmounted(() => {
     <div class="flex w-full mt-2">
       <span class="text-sm op50">
         <span id="busuanzi_container_site_uv" style="display:none">
-          Total Visitors: <span id="busuanzi_value_site_uv" />
+          Visitors: <span id="busuanzi_value_site_uv" />
         </span>
         <span class="mx-2">|</span>
         <span id="busuanzi_container_site_pv" style="display:none">
-          Total Views: <span id="busuanzi_value_site_pv" />
+          Page Views: <span id="busuanzi_value_site_pv" />
         </span>
         <span class="mx-2">|</span>
         <span>
