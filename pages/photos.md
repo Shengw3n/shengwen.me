@@ -10,6 +10,6 @@ display: ''
 
 <div class="prose mx-auto mt-10">
   <div>
-    <em op50>Camera: Fujifilm X-T5</em>
+    <em op50>photos taken with Fujifilm X-T5</em>
   </div>
 </div>
