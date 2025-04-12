@@ -17,7 +17,6 @@ Firmware Lead & Project Manager at {UBC Rocket}<br>
 <i>Previously:</i><br>
 Computer Science Teaching Assistant at {UBC CS}<br>
 Front End Developer Intern at {Bullseye}<br>
-Lead Engineer at {PMSS Robotics}<br>
 
 </div>
 <img src="/avatar.png" alt="Avatar" style="max-width: 200px; height: auto; margin-top: 25px; border-radius: 10px;" class="hide-on-mobile"/>
