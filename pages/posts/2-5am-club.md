@@ -21,7 +21,7 @@ Once I've conquered my sleep schedule, the master plan includes eating healthier
 
 ## Marking Finals for APSC 160
 
-This term was also my second term being a teaching assistant at UBC's APSC 160 course, an introductory computer science course for engineering students. I was put on a lot of tasks this term, from lecture teaching, lab hosting to leading exam invigilations and ultimately making the midterm/final questions. It's definitely an interesting experience designing questions and Python scripts for auto-marking, and seeing the results of the students. I finished marking finals this week for them and it definitely feels good to know most had fun with my questions.
+This term was also my second term being a teaching assistant at UBC's APSC 160 course, an introductory computer science course for engineering students. I was put on a lot of tasks this term, from lecture teaching, lab hosting to leading exam invigilations and ultimately making the midterm/final questions. It's definitely an interesting experience designing questions and Python scripts for auto-marking, and seeing the students take them in front of me. I finished marking the manual portion of the finals this week and it definitely feels good to know most had fun with my questions.
 
 ## Ping Pong Adventures
 
