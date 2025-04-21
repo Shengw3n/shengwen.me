@@ -42,9 +42,8 @@ wine msiexec /i LTspice64.msi
 3. Paste this script:
 
 ```bash
-cd "/Users/$(whoami)/.wine/drive_c/Program Files/ADI/LTspice/" || exit 1
-WINEDEBUG=-all /opt/homebrew/bin/wine LTspice.exe > /dev/null 2>&1 &
-exit 0
+cd "$HOME/.wine/drive_c/Program Files/ADI/LTspice/" || exit 1
+WINEDEBUG=-all wine LTspice.exe > /dev/null 2>&1 &
 ```
 
 4. Save as "LTspice (Wine)" to Applications folder
