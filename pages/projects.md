@@ -12,7 +12,7 @@ projects:
       icon: 'i-material-symbols:web-asset'
     - name: 'Thrust Vectoring Rocket'
       link: 'https://github.com/UBC-Rocket/Thrust-Vectoring-II'
-      desc: 'PID-Controlled Thrust Vectoring<br>Competing @ Launch Canada 2025'
+      desc: 'PID-Controlled Solid-Propellant Rocket<br>Competing @ Launch Canada 2025'
       icon: 'i-material-symbols:rocket-launch-outline'
     - name: 'da Vinci 3D Gaze Estimation'
       desc: 'Computer Vision + LSTM Model<br>Research Project @ RCL'
