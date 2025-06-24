@@ -40,11 +40,17 @@ projects:
         desc: '30k Two-Stage Solid Rocket<br> 1st Place @ Launch Canada 2023'
         icon: 'i-game-icons:rocket-flight'
 
-  FPGA:
+  FPGAs:
       - name: 'FPGA RISC Machine'
         link: 'https://github.com/Shengw3n/FPGA-Reduced-Instruction-Set-Computer'
         desc: '16-bit RISC Machine in System Verilog<br>Course Project for CPEN 211'
         icon: 'i-material-symbols:memory-rounded'
+
+  Others:
+      - name: 'APSC 160 Midterms & Finals'
+        link: 'https://vancouver.calendar.ubc.ca/course-descriptions/courses/apscv-160'
+        desc: 'Exam Design + Auto-Grading Scripts<br>First-Year Programming Course @ UBC'
+        icon: 'i-material-symbols:assignment'
 
 ---
 
