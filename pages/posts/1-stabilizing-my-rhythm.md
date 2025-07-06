@@ -1,6 +1,6 @@
 ---
 title: 1. Stabilizing my Rhythm
-duration: 10 min
+duration: 5 min
 date: 2025-06-30T12:00:00Z
 image: /images/1.jpeg
 math: true

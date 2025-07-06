@@ -1,6 +1,6 @@
 ---
 title: 0. Hello World
-duration: 10 min
+duration: 7 min
 date: 2025-05-31T12:00:00Z
 image: /images/0.jpeg
 math: true
