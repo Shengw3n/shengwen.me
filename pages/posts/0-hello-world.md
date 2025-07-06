@@ -8,7 +8,7 @@ math: true
 
 > This post is a reflection on the month of May 2025.
 
-![UBC Nest](/images/0.jpeg)
+![Suzhou Night](/images/0.jpeg)
 
 Wuxi, China
 2025 World Fencing Championships
