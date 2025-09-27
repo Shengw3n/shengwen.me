@@ -11,10 +11,10 @@ Hi, I am Steven Chen, an ECE student at UBC, firmware developer & ML enthusiast.
 
 <i>Currently:</i><br>
 Embedded Software Intern at {NZ Tech}<br>
-ML Researcher at {RCL}<br>
 Firmware Lead & Project Manager at {UBC Rocket}<br>
 
 <i>Previously:</i><br>
+Research Volunteer at {RCL}<br>
 Lead Teaching Assistant at {UBC CS}<br>
 Front End Developer Intern at {Bullseye}<br>
 
