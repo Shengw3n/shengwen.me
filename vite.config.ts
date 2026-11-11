@@ -133,6 +133,8 @@ export default defineConfig({
             'UBC CS': 'https://www.cs.ubc.ca',
             'Bullseye': 'https://en.bullseye-cn.com',
             'PMSS Robotics': 'https://www.firstinspires.org/robotics/frc',
+            'Sanctuary AI': 'https://www.sanctuary.ai',
+            'PRIME Robotics': 'https://primerobots.org',
 
           },
           imageOverrides: [

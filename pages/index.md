@@ -4,19 +4,19 @@ description: Welcome to my site :)
 art: dots
 ---
 
-Hi, I am Steven Chen, an ECE student at UBC, firmware developer & ML enthusiast.
+Hi, I am Steven Chen, an ECE student at UBC with a minor in Honours Math, a firmware developer, and a full-stack roboticist.
 
 <div style="display: flex; align-items: flex-start; gap: 50px;">
 <div>
 
 <i>Currently:</i><br>
-Embedded Software Intern at {NZ Tech}<br>
-Firmware Lead & Project Manager at {UBC Rocket}<br>
+Research Assistant at {PRIME Robotics}<br>
+Team Captain at {UBC Rocket}<br>
 
 <i>Previously:</i><br>
-Research Volunteer at {RCL}<br>
+Firmware Intern at {Sanctuary AI}<br>
+Embedded Software Intern at {NZ Tech}<br>
 Lead Teaching Assistant at {UBC CS}<br>
-Front End Developer Intern at {Bullseye}<br>
 
 </div>
 <img src="/avatar.png" alt="Avatar" style="max-width: 200px; height: auto; margin-top: 25px; border-radius: 10px;" class="hide-on-mobile"/>
@@ -26,7 +26,7 @@ Dreaming up cool engineering ideas and making them come true is where my passion
 
 I write [blog posts](/posts) about life, engineering, and everything in between.
 
-Outside of programming, I enjoy doing photography and fencing🤺. Some of my photos can be found on [this page](/photos).
+Outside of programming, I enjoy photography and bouldering 🧗. Some of my photos can be found on [this page](/photos).
 
 <div flex-auto />
 
